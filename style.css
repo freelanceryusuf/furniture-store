@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;0,800;1,100;1,700&display=swap');
+
+:root{
+    --primary-color:#f1c40f;
+    --secbg-color:#dfe6e9;
+    --black:#000;
+    --font: 'Poppins', sans-serif;
+    --bg: #f7f7f7;
+    --cart:#ff0000;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+body{
+    background:var(--bg);
+}
+li {
+    list-style: none;
+}
+/* ===========================
+           Button
+==============================
+*/
+.btn {
+    padding: .6rem 1.5rem;
+    text-decoration: none;
+    color: var(--black);
+    font-family: var(--font);
+    border: 1.8px solid var(--primary-color);
+    outline: none;
+    transition: .3s;
+}
+.btn-primary {
+    background: var(--primary-color);
+}
+.btn-primary:hover {
+    background: transparent;
+}
+
+
+.sectitle {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+/* ===========================
+           Header Section
+==============================
+*/
+.header {
+    height: 100vh;
+}
+.nav-section {
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+}
+.logo {
+    display: flex;
+    margin-left: 10%;
+    align-items: center;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--black);
+    margin: 0 1.5rem;
+    transition: .3s;
+    position: relative;
+    padding-bottom: 2px;
+}
+.navbar a:hover{
+    color: var(--primary-color);
+}
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    background: var(--primary-color);
+    opacity: 0;
+    width: 5%;
+    transition: .3s;
+}
+.navbar a:hover::after{
+    opacity: 1;
+    width: 100%;
+}
+
+.nav-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-icon li {
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.nav-icon li sup{
+    margin-left: 5px ;
+    padding: 1px 6px;
+    background:var(--cart);
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.nav-icon .searchBTN{
+    background: var(--primary-color);
+    color: var(--black);
+    padding: .3rem .5rem;
+    border-radius: 4px;
+}
+
+.header-banner {
+    margin: 0 auto;
+    position: relative;
+    width: 85%;
+    top: 15%;
+    display: flex;
+    justify-content: center;
+}
+.header-banner .intro {
+    width: 35%;
+    height: 100%;
+    transform: translateY(6rem);
+}
+.header-banner .intro h1 {
+    font-size: 50px;
+    line-height: 55px;
+}
+.header-banner .intro h1 span {
+    color: var(--primary-color);
+   
+}
+.header-banner .intro p {
+    width: 100%;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 1.5rem 0;
+    text-align: justify;
+}
+
+.social-icon {
+    position: fixed;
+    top: 30%;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 99999;
+}
+.social-icon a {
+    padding: .8rem 1rem;
+    background: var(--primary-color);
+    text-decoration: none;
+    color: var(--black);
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 1rem;
+    text-align: center;
+    border: 1.5px solid var(--primary-color);
+    transition: .3s;
+}
+.social-icon a:hover {
+    background: transparent;
+}
+
+/* End Header */
+
+/* ===========================
+           Product intro Section
+==============================
+*/
+.product-intro {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    background: var(--secbg-color);
+    padding: 5rem 0;
+}
+.pattern::before {
+    content: "";
+    background: url(image/pattern.png);
+    position:absolute;
+    top: -4rem;
+    left: 0;
+    width: 330px;
+    height: 260px;
+    z-index: 1;
+}
+.product-intro .card{
+    width: 450px;
+    height: 400px;
+}
+.product-intro .card:first-child{
+    z-index: 1;
+}
+.product-intro .card:last-child{
+    width: 600px;
+}
+.product-intro .card:last-child p{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.product-intro .card img {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+
+
+/* Feature Product */
+.gridSec{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+.gridSec .prodGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    justify-items: center;
+    width: 75%;
+}
+
+.gridSec .prodGrid .prodCard {
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: ;
+}
+
+.gridSec .prodGrid .prodCard img {
+    width: 100%;
+    height: 60%;
+}
+.gridSec .prodGrid .prodCard p {
+    margin-bottom: 1rem;
+}
